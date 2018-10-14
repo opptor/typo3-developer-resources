@@ -2,10 +2,15 @@
 
 
 1.[TYPOSCRIPT](#typoscript)
+
 2.[EXTBASE](#extbase)
+
 3.[TCA](#tca)
+
 4.[FLEXFORM](#flexform)
+
 5.[SQL](#sql)
+
 6.[FORMS](#forms)
 
 
