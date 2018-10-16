@@ -1,27 +1,50 @@
 # typo3-developer-resources
 
 
-1.[TYPOSCRIPT](#typoscript)
+* [TYPOSCRIPT](#typoscript)
 
-2.[EXTBASE](#extbase)
+* [EXTBASE](#extbase)
+    * [Command Controller](#command_controller)
 
-3.[TCA](#tca)
+* [TCA](#tca)
 
-3.1 [Display Conditions](#display_cond)
+    * [Display Conditions](#display_cond)
 
-4.[FLEXFORM](#flexform)
+* [FLEXFORM](#flexform)
 
-5.[SQL](#sql)
+* [SQL](#sql)
 
-6.[FORMS](#forms)
+* [FORMS](#forms)
+
+* [BASH](#bash)
 
 
 
 
 # <a name="typoscript">TYPOSCRIPT</a>
 # <a name="extbase">EXTBASE</a>
+## <a name="command_controller">Command Controller</a>
+**ext_localconf.php**
+
+    // register command controllers
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['extbase']['commandControllers'][] = Vendor\Extension\NameCommandController::class;
+
+**the controller class**
+
+    use TYPO3\CMS\Extbase\Mvc\Controller\CommandController;
+
+    /**
+     * Command controller
+     */
+    class NameCommandController extends CommandController {
+
+    	public function runNameCommand() {
+    		// implementation
+    	}
+    }
 # <a name="tca">TCA</a>
 ## <a name="display_cond">Display Conditions</a>
 # <a name="flexform">FLEXFORM</a>
 # <a name="sql">SQL</a>
 # <a name="forms">FORMS</a>
+# <a name="bash">BASH</a>
