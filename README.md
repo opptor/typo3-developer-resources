@@ -42,6 +42,10 @@
     		// implementation
     	}
     }
+## <a name="use_command_controller">Use Command Controller on the CLI</a>  
+```
+./cli_dispatch.php extbase commandControllerName:runActionName   
+```
 # <a name="tca">TCA</a>
 ## <a name="display_cond">Display Conditions</a>
 # <a name="flexform">FLEXFORM</a>
