@@ -5,6 +5,7 @@
 
 * [EXTBASE](#extbase)
     * [Command Controller](#command_controller)
+    * [Use Command Controller on the CLI](#use_command_controller)
 
 * [TCA](#tca)
 
@@ -43,6 +44,7 @@
     	}
     }
 ## <a name="use_command_controller">Use Command Controller on the CLI</a>  
+location: ../typo3_src/typo3
 ```
 ./cli_dispatch.php extbase commandControllerName:runActionName   
 ```
