@@ -14,6 +14,8 @@
 
 * [FLEXFORM](#flexform)
 
+* [JAVASCRIPT](#javascript)
+    * [Backend JavaScript with Require.js](#backend)
 * [SQL](#sql)
 
 * [FORMS](#forms)
@@ -79,6 +81,33 @@ in your Extensions **ext_local_conf.php** file:
 # <a name="tca">TCA</a>
 ## <a name="display_cond">Display Conditions</a>
 # <a name="flexform">FLEXFORM</a>
+# <a name="javascript">JAVASCRIPT</a>
+## <a name="backend">Backend JavaScript with Require.js</a>
+```
+/** @var PageRenderer $pageRenderer */
+$pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+$pageRenderer->loadRequireJsModule('TYPO3/CMS/ExtName/Modules/MyModule');
+```
+This works only for JS Modules. Example from the core:
+
+```
+
+/**
+ * Module: TYPO3/CMS/Backend/AjaxDataHandler
+ * Javascript functions to work with AJAX and interacting with Datahandler
+ * through \TYPO3\CMS\Backend\Controller\SimpleDataHandlerController->processAjaxRequest (record_process route)
+ */
+define(['jquery',
+  'TYPO3/CMS/Backend/Modal',
+  'TYPO3/CMS/Backend/Icons',
+  'TYPO3/CMS/Backend/Notification',
+  'TYPO3/CMS/Backend/Severity'
+], function($, Modal, Icons, Notification, Severity) {
+  'use strict';
+....
+```
+The first parameter is an array of modules, the second one is a function. The parameters of the function correspondend with the modules from the first array.
+
 # <a name="sql">SQL</a>
 # <a name="forms">FORMS</a>
 # <a name="bash">BASH</a>
