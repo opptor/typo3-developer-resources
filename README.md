@@ -80,27 +80,26 @@ in your Extensions **ext_local_conf.php** file:
 
 # <a name="tca">TCA</a>
 ## <a name="display_cond">Display Conditions</a>
+A display condition renders a field in the tca, only if the given condition is met. With the onChange setting, you can enforce a frame reload.
 ```
 'field_a' => [
-			'displayCond' => 'FIELD:field_b:<:1',
-			'exclude' => TRUE,
-			'label' => 'This is field a,  showing only if field b is checked',
-			'config' => [
-				'type' => 'input',
-				'eval' => 'required, trim'
-			],
-		],
-
-
-		'field_b' => [
-			'l10n_mode' => 'exclude',
-			'exclude' => TRUE,
-			'onChange' => 'reload',
-			'label' => 'This field reload the frame when changed, so field_a can render',
-			'config' => [
-				'type' => 'check',
-			],
-		],
+	'displayCond' => 'FIELD:field_b:<:1',
+	'exclude' => TRUE,
+	'label' => 'This is field a,  showing only if field b is checked',
+	'config' => [
+		'type' => 'input',
+		'eval' => 'required, trim'
+	],
+],
+'field_b' => [
+	'l10n_mode' => 'exclude',
+	'exclude' => TRUE,
+	'onChange' => 'reload',
+	'label' => 'This field reload the frame when changed, so field_a can render',
+	'config' => [
+		'type' => 'check',
+	],
+],
 ```
 # <a name="flexform">FLEXFORM</a>
 # <a name="javascript">JAVASCRIPT</a>
