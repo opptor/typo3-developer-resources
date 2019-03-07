@@ -22,6 +22,8 @@
 
 * [BASH](#bash)
 
+* [USEFUL LINKS](#links)
+
 
 
 
@@ -132,3 +134,5 @@ The first parameter is an array of modules, the second one is a function. The pa
 # <a name="sql">SQL</a>
 # <a name="forms">FORMS</a>
 # <a name="bash">BASH</a>
+# <a name="links">Useful Links</a>
+https://typo3.github.io/TYPO3.Icons/action.html
