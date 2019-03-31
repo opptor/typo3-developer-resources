@@ -1,6 +1,8 @@
 # typo3-developer-resources
 
 
+* [DOCTRINE](#doctrine)
+
 * [TYPOSCRIPT](#typoscript)
 
 * [EXTBASE](#extbase)
@@ -26,6 +28,22 @@
 
 
 
+
+# <a name="doctrine">DOCTRINE</a>
+## <a name="simple_query">A simple query</a>
+The following query retrieves an array of all page fields:
+```
+	$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable(
+		'pages'
+	)->createQueryBuilder();
+
+	$pageArray = $queryBuilder->select('*')
+		->from('pages')
+		->where(
+			$queryBuilder->expr()->eq('uid', $locationPage)
+		)
+		->execute()->fetchAll();
+```
 
 # <a name="typoscript">TYPOSCRIPT</a>
 # <a name="extbase">EXTBASE</a>
