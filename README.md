@@ -2,7 +2,8 @@
 
 
 * [DOCTRINE](#doctrine)
-
+    * [A simple query](#simple_query)
+    
 * [TYPOSCRIPT](#typoscript)
 
 * [EXTBASE](#extbase)
@@ -33,16 +34,16 @@
 ## <a name="simple_query">A simple query</a>
 The following query retrieves an array of all page fields:
 ```
-	$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable(
-		'pages'
-	)->createQueryBuilder();
+$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable(
+	'pages'
+)->createQueryBuilder();
 
-	$pageArray = $queryBuilder->select('*')
-		->from('pages')
-		->where(
-			$queryBuilder->expr()->eq('uid', $locationPage)
-		)
-		->execute()->fetchAll();
+$pageArray = $queryBuilder->select('*')
+	->from('pages')
+	->where(
+		$queryBuilder->expr()->eq('uid', $pageUid)
+	)
+	->execute()->fetchAll();
 ```
 
 # <a name="typoscript">TYPOSCRIPT</a>
