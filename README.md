@@ -155,5 +155,7 @@ The first parameter is an array of modules, the second one is a function. The pa
 # <a name="bash">BASH</a>
 # <a name="links">Useful Links</a>
 https://docs.typo3.org/typo3cms/CoreApiReference/
+
 https://typo3.github.io/TYPO3.Icons/action.html
+
 https://typo3worx.eu/2018/12/master-challenging-typo3-upgrade-projects/
