@@ -159,3 +159,5 @@ https://docs.typo3.org/typo3cms/CoreApiReference/
 https://typo3.github.io/TYPO3.Icons/action.html
 
 https://typo3worx.eu/2018/12/master-challenging-typo3-upgrade-projects/
+
+https://typo3worx.eu/2018/02/typoscript-explained/
