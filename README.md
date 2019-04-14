@@ -161,3 +161,5 @@ https://typo3.github.io/TYPO3.Icons/action.html
 https://typo3worx.eu/2018/12/master-challenging-typo3-upgrade-projects/
 
 https://typo3worx.eu/2018/02/typoscript-explained/
+
+https://usetypo3.com/24-fluid-tips.html
