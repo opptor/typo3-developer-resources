@@ -163,3 +163,11 @@ https://typo3worx.eu/2018/12/master-challenging-typo3-upgrade-projects/
 https://typo3worx.eu/2018/02/typoscript-explained/
 
 https://usetypo3.com/24-fluid-tips.html
+
+https://plugins.jetbrains.com/plugin/8098-typo3-xliff-utility
+
+https://plugins.jetbrains.com/plugin/9496-typo3-cms-plugin
+
+https://plugins.jetbrains.com/plugin/7275-codeglance
+
+https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-
