@@ -10,6 +10,7 @@
     * [Command Controller](#command_controller)
     * [Use Command Controller on the CLI](#use_command_controller)
     * [Plugin wizard](#plugin_wizard)
+    * [Attach a file to a model](#file_model)
 
 * [TCA](#tca)
 
@@ -98,6 +99,53 @@ in your Extensions **ext_local_conf.php** file:
 	mod.wizards.newContentElement.wizardItems.someName.before = *'
 );
 ```
+## <a name="file_model">Attach a file to a model</a>  
+Steps:
+- Get File Object
+```
+$objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+$resourceFactory = $objectManager->get(ResourceFactory::class);
+$fileObject = $resourceFactory->getFileObjectFromCombinedIdentifier(
+	'1:/' . $pathToFile
+);
+```
+- Override the FileReference Class
+```
+namespace Vendor\MyExtension\Domain\Model;
+
+/**
+ * Class FileReference
+ *
+ * @package Vendor\MyExtension\Domain\Model
+ */
+class FileReference extends \TYPO3\CMS\Extbase\Domain\Model\FileReference {
+	/**
+	 * @var string
+	 */
+	protected $tablenames = 'tx_myextension_domain_model_mymodel';
+}
+```
+
+- Get File Reference Object
+```
+$coreFileReference = $resourceFactory->createFileReferenceObject(
+	[
+		'uid_local' => $fileObject->getUid(),
+		'uid_foreign' => $myModel->getUid(),
+		'table_local' => 'sys_file',
+		'uid' => uniqid('abcdef', TRUE)
+	]
+);
+
+// get instance of overriden FileReference
+$fileReference = GeneralUtility::makeInstance(FileReference::class);
+$fileReference->setOriginalResource($coreFileReference);
+
+// call the setter of the model
+$myModel->setFile($fileReference);
+$myModelRepository->persist();
+```
+
 
 # <a name="tca">TCA</a>
 ## <a name="display_cond">Display Conditions</a>
