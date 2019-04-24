@@ -212,6 +212,8 @@ https://typo3worx.eu/2018/02/typoscript-explained/
 
 https://usetypo3.com/24-fluid-tips.html
 
+https://www.derhansen.de/2012/07/flexforms-optionen-in-abhangigkeit-von.html
+
 https://plugins.jetbrains.com/plugin/8098-typo3-xliff-utility
 
 https://plugins.jetbrains.com/plugin/9496-typo3-cms-plugin
