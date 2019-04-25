@@ -221,3 +221,5 @@ https://plugins.jetbrains.com/plugin/9496-typo3-cms-plugin
 https://plugins.jetbrains.com/plugin/7275-codeglance
 
 https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-
+
+https://twitter.com/calebporzio/status/1121054728148926467
