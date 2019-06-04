@@ -225,3 +225,5 @@ https://plugins.jetbrains.com/plugin/7275-codeglance
 https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-
 
 https://twitter.com/calebporzio/status/1121054728148926467
+
+https://www.sebkln.de/en/tutorials/detail/translating-forms-in-the-typo3-form-framework/#c282
